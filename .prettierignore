@@ -1,0 +1,8 @@
+**/node_modules
+**/dist
+.browserslistrc
+.editorconfig
+.gitignore
+.prettierignore
+.prettierrc
+.eslintrc.json
