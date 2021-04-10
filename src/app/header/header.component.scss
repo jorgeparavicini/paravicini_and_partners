@@ -2,8 +2,26 @@
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 
-.sub-navigation {
-  width: 200px;
+$header_size_large: 215px;
+$header_size_small: 80px;
+$menu_width_large: 200px;
+
+.header {
+  height: $header_size_small;
+
+  @include media-breakpoint-up(md) {
+    height: $header_size_large;
+  }
+}
+
+.navigation-dropdown {
+  width: 100%;
+  margin-top: $header_size_small;
+
+  @include media-breakpoint-up(md) {
+    width: $menu_width_large;
+    margin-top: $header_size_large;
+  }
 }
 
 .btn-menu:hover {
@@ -39,4 +57,35 @@
     margin-left: 120px;
     margin-right: 120px;
   }
+}
+
+.nav-btn-icon {
+  height: 20px;
+  width: 20px;
+
+  transition: ease-in-out transform 0.5s;
+}
+
+.nav-btn-icon:before {
+  content: '';
+  background-color: black;
+  transform-origin: top left;
+  transform: translate(0px, 0px) rotateZ(45deg);
+  height: 1px;
+  width: 14.14px;
+  display: block;
+}
+
+.nav-btn-icon:after {
+  content: '';
+  background-color: black;
+  transform-origin: top left;
+  transform: translate(0px, 19px) rotateZ(-45deg);
+  height: 1px;
+  width: 14.14px;
+  display: block;
+}
+
+.nav-btn-icon-open {
+  transform: rotateX(90deg);
 }

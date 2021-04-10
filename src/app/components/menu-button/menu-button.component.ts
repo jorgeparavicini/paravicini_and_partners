@@ -6,7 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./menu-button.component.scss'],
 })
 export class MenuButtonComponent implements OnInit {
-  open = false;
+  open = true;
 
   constructor() {}
 

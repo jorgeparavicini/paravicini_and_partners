@@ -1,35 +1,38 @@
 <div>
-  <div class="p-4 bg-white d-none d-md-flex flex-column text-secondary">
-    <p class="m-0 fs-2">Paravicini & partners</p>
-    <p class="m-0 fs-4">Executive Search, Assessment and Coaching</p>
-  </div>
-
-  <div
-    class="pt-2 pb-2 text-white w-100 position-relative bg-primary d-flex justify-content-center align-items-center"
-  >
-    <div class="h-100 start-0 d-flex position-absolute align-items-center">
-      <app-menu-button #menu></app-menu-button>
+  <div class="top-0 position-fixed w-100 d-flex flex-column header">
+    <div class="p-4 bg-white d-none d-md-flex flex-column text-secondary">
+      <p class="m-0 fs-2">Paravicini & partners</p>
+      <p class="m-0 fs-4">Executive Search, Assessment and Coaching</p>
     </div>
 
-    <p class="pt-3 pb-3 m-0 text-center d-block d-md-none fs-3 w-100">
-      Paravicini & partners
-    </p>
-
-    <nav
-      class="d-none d-md-flex justify-content-center container-sm banner-nav"
-    >
-      <button
-        *ngFor="let site of sites; let i = index"
-        class="p-0 mt-3 mb-3 ms-auto me-auto btn btn-menu fw-lighter"
-        [ngClass]="{ 'text-dark': selectedSiteIndex === i }"
-      >
-        {{ site[0] }}
-      </button>
-    </nav>
-  </div>
-  <div class="sub-navigation d-flex flex-column position-relative">
     <div
-      class="pt-2 mt-5 position-absolute ms-4 border-top border-3 border-primary nav-container w-100"
+      class="text-white w-100 position-relative bg-primary d-flex justify-content-center align-items-center flex-grow-1"
+    >
+      <div class="h-100 start-0 d-flex position-absolute align-items-center">
+        <app-menu-button #menu></app-menu-button>
+      </div>
+
+      <p class="pt-3 pb-3 m-0 text-center d-block d-md-none fs-3 w-100">
+        Paravicini & partners
+      </p>
+
+      <nav
+        class="d-none d-md-flex justify-content-center container-sm banner-nav"
+      >
+        <button
+          *ngFor="let site of sites; let i = index"
+          class="p-0 mt-3 mb-3 ms-auto me-auto btn btn-menu fw-lighter"
+          [ngClass]="{ 'text-dark': selectedSiteIndex === i }"
+        >
+          {{ site[0] }}
+        </button>
+      </nav>
+    </div>
+  </div>
+  <div class="navigation-dropdown d-flex flex-column position-relative">
+    <!-- Navigation on larger devices -->
+    <div
+      class="pt-2 mt-5 d-none d-md-block position-absolute ms-4 border-top border-3 border-primary nav-container w-100"
       [ngClass]="{ 'nav-container-open': menu.open }"
     >
       <p class="fs-3 fw-light">{{ sites[selectedSiteIndex][0] }}</p>
@@ -46,10 +49,29 @@
         </button>
       </nav>
     </div>
+
+    <!-- Navigation on smaller devices -->
+    <div
+      class="pb-3 d-block d-md-none position-absolute nav-container vw-100"
+      [ngClass]="{ 'nav-container-open': menu.open }"
+    >
+      <div
+        class="d-flex flex-column w-100 align-items-center ps-4 pe-4"
+        *ngFor="let site of sites; let i = index"
+      >
+        <p class="mt-3 text-start w-100 h-100 border-bottom">
+          {{ site[0] }}
+        </p>
+        <div class="d-flex flex-column w-100">
+          <button class="btn text-start" *ngFor="let subsite of site[1]">
+            {{ subsite }}
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="container">
-    <p>fasf</p>
     <ng-content></ng-content>
   </div>
 </div>

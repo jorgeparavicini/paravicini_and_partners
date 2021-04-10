@@ -12,10 +12,19 @@ export class HeaderComponent implements OnInit {
 
   readonly sites: [string, string[]][] = [
     ['About Us', ['Firma', 'Owner']],
-    ['Unser Angebot', []],
-    ['Industrie Expertise', []],
-    ['Funktions Expertise', []],
-    ['Kontakt', []],
+    [
+      'Unser Angebot',
+      ['Executive Search', 'Assessment', 'Coaching', 'Outplacement'],
+    ],
+    [
+      'Industrie Expertise',
+      ['Industrie', 'Technologie', 'IT & Telekommunikation'],
+    ],
+    [
+      'Funktions Expertise',
+      ['Board', 'CEO & Management', 'CFO & Finance', 'CIO & Digital'],
+    ],
+    ['Kontakt', ['Informationen']],
   ];
 
   selectedSiteIndex = 0;
@@ -24,4 +33,8 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  public sanitizeString(s: string): string {
+    return s.replace(' ', '_');
+  }
 }
