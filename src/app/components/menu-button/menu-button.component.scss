@@ -1,0 +1,39 @@
+.bar {
+  background-color: white;
+  transform: rotate(0) translate(0px, 0px);
+  transition: ease all 0.2s;
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.bar:not(:first-child) {
+  margin-top: 4px;
+}
+
+.bar:nth-child(2) {
+  width: 16px;
+}
+
+.menu:hover .bar:nth-child(2) {
+  width: 22px;
+}
+
+.burger-open {
+  > .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 4px);
+  }
+
+  > .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  > .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,11 @@
+<div
+  class="d-flex justify-content-center align-items-center cursor-pointer menu"
+  (click)="open = !open"
+>
+  <div class="burger ms-4 me-4" [ngClass]="{ 'burger-open': open }">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  <p class="d-none d-lg-block m-0 text-uppercase">Menü</p>
+</div>

@@ -1,4 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&family=Roboto:wght@100;300;400;500&display=swap');
+
+$font-family-base: 'Roboto Slab', sans-serif;
+
+$primary: #242852;
+$secondary: #4a66ac;
+$light: #d9d9d9;
+$dark: #6ef90f;
+
+$btn-border-radius: 0;
+$btn-hover-bg-shade-amount: 40%;
+$btn-hover-bg-tint-amount: 40%;
+
+$font-weight-base: 300;
+
+$enable-responsive-font-sizes: true;
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+.btn-menu {
+  @extend .btn-primary;
+  color: white;
+  background: transparent;
+  font-weight: 300;
+  border: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.btn-menu:hover,
+.btn-menu:focus,
+.btn-menu:active {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-color: transparent;
+}

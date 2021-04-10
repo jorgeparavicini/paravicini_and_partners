@@ -1,18 +1,42 @@
-.header {
-  color: #4a66ac;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.sub-navigation {
+  width: 200px;
 }
 
-.header__title {
-  font-size: 2rem;
+.btn-menu:hover {
+  color: var(--bs-light) !important;
 }
 
-.header__subtitle {
-  font-size: 1.5rem;
+.nav-container {
+  z-index: -1;
+  transition: ease-in-out transform 0.5s;
+  transform: translateY(calc(-100% - 3.5rem));
 }
 
-.banner {
-  background-color: #242852;
-  color: white;
-  font-size: 1.3rem;
+.nav-container-open {
+  transform: none;
+}
+
+.btn-menu {
+  font-size: medium;
+  @include media-breakpoint-up(lg) {
+    font-size: large;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: larger;
+  }
+}
+
+.banner-nav {
+  margin-left: 60px;
+  margin-right: 60px;
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
 }
