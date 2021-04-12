@@ -56,6 +56,7 @@ $enable-responsive-font-sizes: true;
   font-weight: 400;
   color: black;
   text-align: start;
+  text-transform: uppercase;
 
   @include media-breakpoint-up(md) {
     background-color: var(--bs-light);
@@ -63,6 +64,8 @@ $enable-responsive-font-sizes: true;
     color: var(--bs-secondary);
     font-weight: 200;
     font-size: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   @include media-breakpoint-up(lg) {
