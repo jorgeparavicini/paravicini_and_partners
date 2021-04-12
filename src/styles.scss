@@ -31,6 +31,10 @@ $enable-responsive-font-sizes: true;
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
+html {
+  overflow-y: scroll;
+}
+
 .btn-menu {
   @extend .btn-primary;
   color: white;
