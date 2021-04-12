@@ -30,7 +30,10 @@
       </nav>
     </div>
   </div>
-  <div class="position-relative" [ngClass]="{ 'menu-open': menu.open }">
+  <div
+    class="position-relative header-indent"
+    [ngClass]="{ 'menu-open': menu.open }"
+  >
     <div
       class="pb-3 d-block position-absolute nav-container"
       [ngClass]="selectedSite ? 'd-md-block' : 'd-md-none'"
@@ -61,7 +64,7 @@
       </nav>
     </div>
   </div>
-  <div class="container">
+  <div class="container header-indent">
     <router-outlet (activate)="onRouterOutletActivate($event)"></router-outlet>
   </div>
 </div>

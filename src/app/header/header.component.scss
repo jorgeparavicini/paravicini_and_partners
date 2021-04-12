@@ -15,20 +15,25 @@ $menu_width_large: 320px;
   }
 }
 
+.header-indent {
+  margin-top: $header_size_small;
+  @include media-breakpoint-up(md) {
+    margin-top: $header_size_large;
+  }
+}
+
 .nav-container {
   background-color: white;
   z-index: $zindex-dropdown;
   transition: ease-in-out transform 0.5s;
   transform: translateY(calc(-100% - 3.5rem));
   width: 100vw;
-  margin-top: $header_size_small;
 
   min-height: calc(100vh - #{$header_size_small});
 
   @include media-breakpoint-up(md) {
     min-height: auto;
     width: $menu_width_large;
-    margin-top: $header_size_large;
   }
 }
 
