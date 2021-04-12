@@ -72,13 +72,6 @@ html {
   padding-bottom: 1rem;
 }
 
-/* Font Size Header */
-.fs-h {
-  margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
-  margin-top: 3rem;
-}
-
 .banner {
   @extend .fs-4;
   border-left: 3px solid var(--bs-primary);
