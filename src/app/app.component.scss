@@ -1,0 +1,17 @@
+@import '../variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.content {
+  margin-left: 0;
+  margin-right: 0;
+
+  @include media-breakpoint-up(md) {
+    margin-left: $menu_width_medium;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-left: $menu_width_large;
+  }
+}
