@@ -5,6 +5,7 @@
 $header_size_large: 215px;
 $header_size_small: 80px;
 $menu_width_large: 320px;
+$menu_width_medium: 220px;
 
 .header {
   height: $header_size_small;
@@ -33,6 +34,10 @@ $menu_width_large: 320px;
 
   @include media-breakpoint-up(md) {
     min-height: auto;
+    width: $menu_width_medium;
+  }
+
+  @include media-breakpoint-up(lg) {
     width: $menu_width_large;
   }
 }
@@ -44,8 +49,25 @@ $menu_width_large: 320px;
     border-bottom: none;
     border-width: 3px !important;
     border-top: 1px solid;
-    font-size: 1.75rem !important;
+    font-size: 1.2rem !important;
     border-color: var(--bs-primary);
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.75rem !important;
+  }
+}
+
+.content {
+  margin-left: 0;
+  margin-right: 0;
+
+  @include media-breakpoint-up(md) {
+    margin-left: $menu_width_medium;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-left: $menu_width_large;
   }
 }
 

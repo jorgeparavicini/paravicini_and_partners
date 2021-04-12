@@ -33,7 +33,7 @@
   <div class="header-indent">
     <div class="position-relative" [ngClass]="{ 'menu-open': menu.open }">
       <div
-        class="pb-3 d-block position-absolute nav-container"
+        class="pb-3 d-block position-fixed nav-container"
         [ngClass]="selectedSite ? 'd-md-block' : 'd-md-none'"
       >
         <nav
@@ -41,7 +41,7 @@
           *ngFor="let site of sites; let i = index"
           [ngClass]="selectedSite?.siteIndex === i ? 'd-md-flex' : 'd-md-none'"
         >
-          <p class="text-start w-100 h-100 nav-title pt-md-2">
+          <p class="text-start w-100 h-100 nav-title pt-3 pt-md-2">
             {{ site.name }}
           </p>
           <div class="d-flex flex-column w-100">
@@ -62,10 +62,12 @@
         </nav>
       </div>
     </div>
-    <div class="container pt-5">
-      <router-outlet
-        (activate)="onRouterOutletActivate($event)"
-      ></router-outlet>
+    <div class="content">
+      <div class="container p-5">
+        <router-outlet
+          (activate)="onRouterOutletActivate($event)"
+        ></router-outlet>
+      </div>
     </div>
   </div>
 </div>
