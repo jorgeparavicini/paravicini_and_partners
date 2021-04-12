@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MenuButtonComponent } from '../components/menu-button/menu-button.component';
 import { BaseComponent } from '../containers/base.component';
 
@@ -10,6 +10,9 @@ import { BaseComponent } from '../containers/base.component';
 export class HeaderComponent implements OnInit {
   @ViewChild('menu')
   menu!: MenuButtonComponent;
+
+  @Input()
+  selectedSite!: BaseComponent;
 
   sites = [
     {
@@ -61,11 +64,5 @@ export class HeaderComponent implements OnInit {
     },
   ];
 
-  selectedSite?: BaseComponent;
-
   ngOnInit(): void {}
-
-  public onRouterOutletActivate(event: any) {
-    this.selectedSite = event as BaseComponent;
-  }
 }

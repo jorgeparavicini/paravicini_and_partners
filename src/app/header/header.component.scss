@@ -1,11 +1,11 @@
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
+@import '../../variables';
 
-$header_size_large: 215px;
-$header_size_small: 80px;
-$menu_width_large: 320px;
-$menu_width_medium: 220px;
+* {
+  font-family: 'Roboto Slab', serif;
+}
 
 .header {
   height: $header_size_small;
@@ -13,13 +13,6 @@ $menu_width_medium: 220px;
 
   @include media-breakpoint-up(md) {
     height: $header_size_large;
-  }
-}
-
-.header-indent {
-  margin-top: $header_size_small;
-  @include media-breakpoint-up(md) {
-    margin-top: $header_size_large;
   }
 }
 
