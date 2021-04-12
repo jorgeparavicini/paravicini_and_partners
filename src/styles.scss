@@ -35,6 +35,34 @@ $enable-responsive-font-sizes: true;
 .btn-menu:active {
   background-color: transparent;
   border: none;
-  box-shadow: none;
+  box-shadow: none !important;
   border-color: transparent;
+  color: #737373 !important;
+}
+
+.btn-side-menu {
+  @extend .btn-menu;
+  font-weight: 400;
+  color: black;
+  text-align: start;
+
+  @include media-breakpoint-up(md) {
+    background-color: var(--bs-light);
+    border-color: var(--bs-light);
+    color: var(--bs-secondary);
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+}
+
+.btn-side-menu-primary {
+  @include media-breakpoint-up(md) {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: white !important;
+  }
+}
+
+.btn-side-menu:hover {
+  background-color: #cccccc;
 }
