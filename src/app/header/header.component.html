@@ -30,41 +30,42 @@
       </nav>
     </div>
   </div>
-  <div
-    class="position-relative header-indent"
-    [ngClass]="{ 'menu-open': menu.open }"
-  >
-    <div
-      class="pb-3 d-block position-absolute nav-container"
-      [ngClass]="selectedSite ? 'd-md-block' : 'd-md-none'"
-    >
-      <nav
-        class="d-flex flex-column w-100 align-items-center ps-4 pe-4 pt-md-5"
-        *ngFor="let site of sites; let i = index"
-        [ngClass]="selectedSite?.siteIndex === i ? 'd-md-flex' : 'd-md-none'"
+  <div class="header-indent">
+    <div class="position-relative" [ngClass]="{ 'menu-open': menu.open }">
+      <div
+        class="pb-3 d-block position-absolute nav-container"
+        [ngClass]="selectedSite ? 'd-md-block' : 'd-md-none'"
       >
-        <p class="mt-3 text-start w-100 h-100 nav-title pt-md-2">
-          {{ site.name }}
-        </p>
-        <div class="d-flex flex-column w-100">
-          <a
-            class="btn btn-side-menu mt-md-1 pt-md-2 pb-md-2"
-            *ngFor="let subsite of site.subSites; let j = index"
-            [ngClass]="{
-              'btn-side-menu-primary':
-                selectedSite?.subSiteIndex === j ||
-                (selectedSite && sites[selectedSite.siteIndex].common),
-              'd-none d-md-block': sites[i].common && j > 0
-            }"
-            href="{{ subsite.url }}"
-          >
-            {{ subsite.name }}
-          </a>
-        </div>
-      </nav>
+        <nav
+          class="d-flex flex-column w-100 align-items-center ps-4 pe-4 pt-md-5"
+          *ngFor="let site of sites; let i = index"
+          [ngClass]="selectedSite?.siteIndex === i ? 'd-md-flex' : 'd-md-none'"
+        >
+          <p class="text-start w-100 h-100 nav-title pt-md-2">
+            {{ site.name }}
+          </p>
+          <div class="d-flex flex-column w-100">
+            <a
+              class="btn btn-side-menu mt-md-1 pt-md-2 pb-md-2"
+              *ngFor="let subsite of site.subSites; let j = index"
+              [ngClass]="{
+                'btn-side-menu-primary':
+                  selectedSite?.subSiteIndex === j ||
+                  (selectedSite && sites[selectedSite.siteIndex].common),
+                'd-none d-md-block': sites[i].common && j > 0
+              }"
+              href="{{ subsite.url }}"
+            >
+              {{ subsite.name }}
+            </a>
+          </div>
+        </nav>
+      </div>
     </div>
-  </div>
-  <div class="container header-indent">
-    <router-outlet (activate)="onRouterOutletActivate($event)"></router-outlet>
+    <div class="container pt-5">
+      <router-outlet
+        (activate)="onRouterOutletActivate($event)"
+      ></router-outlet>
+    </div>
   </div>
 </div>
