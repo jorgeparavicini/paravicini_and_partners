@@ -1,0 +1,28 @@
+.qualifikation-item {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  margin: 0.5rem;
+}
+
+.qualifikation-item > p {
+  margin: auto;
+}
+
+.dark-blue {
+  background-color: #242852;
+}
+
+.light-blue {
+  background-color: #0070c0;
+}
+
+.purple {
+  background-color: #7030a0;
+}
+
+.red {
+  background-color: #c00000;
+}
