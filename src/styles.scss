@@ -83,11 +83,15 @@ html {
   @extend .fs-4;
   border-left: 3px solid var(--bs-primary);
   margin-top: 3rem;
-  margin-left: 1.5rem;
+  margin-left: 0;
   padding: 1.5rem;
   padding-right: 0;
   font-weight: 400;
   background-color: #f2f2f2;
+
+  @include media-breakpoint-up(md) {
+    margin-left: 1.5rem;
+  }
 }
 
 .header-indent {

@@ -1,0 +1,24 @@
+@import '../../../../variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.icon-block-sm {
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: 25%;
+  }
+}
+
+.icon-block-lg {
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: 75%;
+  }
+}
+
+.icon {
+  width: 50px;
+}
