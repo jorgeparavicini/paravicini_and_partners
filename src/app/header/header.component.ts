@@ -39,9 +39,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       name: 'Industrie Expertise',
       url: '/industrie_expertise',
       subSites: [
-        { name: 'Industrie', url: '/inudstrie_expertise' },
-        { name: 'Technologie', url: '/inudstrie_expertise' },
-        { name: 'IT & Telekommunikation', url: '/inudstrie_expertise' },
+        { name: 'Industrie', url: '/industrie_expertise' },
+        { name: 'Technologie', url: '/industrie_expertise' },
+        { name: 'IT & Telekommunikation', url: '/industrie_expertise' },
       ],
       common: true,
     },
