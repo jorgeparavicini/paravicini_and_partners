@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { MenuButtonComponent } from '../components/menu-button/menu-button.component';
 import { BaseComponent } from '../containers/base.component';
 
@@ -7,7 +7,7 @@ import { BaseComponent } from '../containers/base.component';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('menu')
   menu!: MenuButtonComponent;
 
@@ -64,5 +64,23 @@ export class HeaderComponent implements OnInit {
     },
   ];
 
+  @HostListener('window:resize') onResize() {
+    this.checkMenuState();
+  }
+
   ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    this.checkMenuState();
+  }
+
+  private checkMenuState(): void {
+    if (this.menu && typeof window !== 'undefined') {
+      if (window.innerWidth >= 768) {
+        this.menu.open = true;
+      } else {
+        this.menu.open = false;
+      }
+    }
+  }
 }
