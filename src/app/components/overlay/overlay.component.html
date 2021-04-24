@@ -1,0 +1,11 @@
+<div
+  class="position-fixed d-block w-100 vh-100 bg-white"
+  [ngClass]="{ 'd-none': !display }"
+>
+  <video autoplay loop playsinline muted class="w-100 h-100" #video>
+    <source src="/assets/videos/background_video.mp4" type="video/mp4" />
+  </video>
+  <div class="position-absolute top-50 start-50 translate-middle">
+    <p class="slideIn text-white display-1">Eine Neuorientierung</p>
+  </div>
+</div>

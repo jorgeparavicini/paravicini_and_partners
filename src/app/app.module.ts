@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { MenuButtonComponent } from './components/menu-button/menu-button.component';
 import { SitesModule } from './containers/sites.module';
 import { HeaderComponent } from './header/header.component';
+import { OverlayComponent } from './components/overlay/overlay.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, MenuButtonComponent],
+  declarations: [AppComponent, HeaderComponent, MenuButtonComponent, OverlayComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
