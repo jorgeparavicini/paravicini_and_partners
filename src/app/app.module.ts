@@ -6,9 +6,10 @@ import { MenuButtonComponent } from './components/menu-button/menu-button.compon
 import { SitesModule } from './containers/sites.module';
 import { HeaderComponent } from './header/header.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, MenuButtonComponent, OverlayComponent],
+  declarations: [AppComponent, HeaderComponent, MenuButtonComponent, OverlayComponent, FooterComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,

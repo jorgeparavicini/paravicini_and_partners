@@ -3,9 +3,15 @@
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 
+.page {
+  min-height: 100%;
+}
+
 .content {
   margin-left: 0;
   margin-right: 0;
+  min-height: 100%;
+  flex: 1 0 auto;
 
   @include media-breakpoint-up(md) {
     margin-left: $menu_width_medium;
@@ -14,6 +20,10 @@
   @include media-breakpoint-up(lg) {
     margin-left: $menu_width_large;
   }
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 :host {
