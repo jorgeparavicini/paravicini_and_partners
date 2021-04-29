@@ -1,23 +1,34 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-overlay',
   templateUrl: './overlay.component.html',
-  styleUrls: ['./overlay.component.scss']
+  styleUrls: ['./overlay.component.scss'],
 })
 export class OverlayComponent implements OnInit, AfterViewInit {
-
   @ViewChild('video') video!: ElementRef;
 
-  duration = 3500;
+  duration = 6000;
+  fadeOutDuration = 2000;
 
   display = true;
+  shouldHide = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.hideScrollbar();
-    setTimeout(this.showScrollbar, this.duration);
+    setTimeout(() => this.hideOverlay(), this.duration);
+    setTimeout(
+      () => (this.display = false),
+      this.duration + this.fadeOutDuration
+    );
   }
 
   ngAfterViewInit() {
@@ -28,12 +39,21 @@ export class OverlayComponent implements OnInit, AfterViewInit {
     };
   }
 
+  hideOverlay(): void {
+    console.log('Hiding');
+    this.shouldHide = true;
+    this.showScrollbar();
+  }
+
   private hideScrollbar(): void {
-    document.body.classList.add('overflow-hidden');
+    if (typeof document !== 'undefined') {
+      document.body.classList.add('overflow-hidden');
+    }
   }
 
   private showScrollbar(): void {
-    document.body.classList.remove('overflow-hidden');
+    if (typeof document !== 'undefined') {
+      document.body.classList.remove('overflow-hidden');
+    }
   }
-
 }

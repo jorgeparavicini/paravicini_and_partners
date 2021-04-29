@@ -1,4 +1,11 @@
-import { AfterViewInit, Component, HostListener, Input, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  HostListener,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { MenuButtonComponent } from '../components/menu-button/menu-button.component';
 import { BaseComponent } from '../containers/base.component';
 
@@ -19,7 +26,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       name: 'About Us',
       url: '/about_us',
       subSites: [
-        { name: 'Firma', url: '/about_us/firma' },
+        { name: 'Firma', url: '/' },
         { name: 'Owner', url: '/about_us/owner' },
       ],
       common: false,

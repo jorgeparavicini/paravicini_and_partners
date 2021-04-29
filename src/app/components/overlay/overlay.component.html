@@ -1,11 +1,13 @@
 <div
-  class="position-fixed d-block w-100 vh-100 bg-white"
-  [ngClass]="{ 'd-none': !display }"
+  class="position-fixed d-block w-100 vh-100 bg-white overlay top-0 start-0"
+  [ngClass]="{ 'd-none': !display, 'hide-overlay': shouldHide }"
+  (click)="hideOverlay()"
 >
   <video autoplay loop playsinline muted class="w-100 h-100" #video>
-    <source src="/assets/videos/background_video.mp4" type="video/mp4" />
+    <source src="/assets/videos/bg_video.webm" type="video/webm" />
+    <source src="/assets/videos/bg_video.mp4" type="video/mp4" />
   </video>
   <div class="position-absolute top-50 start-50 translate-middle">
-    <p class="slideIn text-white display-1">Eine Neuorientierung</p>
+    <p class="slideIn text-white display-1">Paravicini and Partners</p>
   </div>
 </div>
