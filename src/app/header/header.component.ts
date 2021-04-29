@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       name: 'About Us',
       url: '/about_us',
       subSites: [
-        { name: 'Firma', url: '/' },
+        { name: 'Firma', url: '/about_us/firma' },
         { name: 'Owner', url: '/about_us/owner' },
       ],
       common: false,

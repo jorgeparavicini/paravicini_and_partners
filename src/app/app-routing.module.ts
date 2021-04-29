@@ -32,7 +32,12 @@ export const routes: Routes = [
   { path: 'industrie_expertise', component: IndustrieExpertiseComponent },
   { path: 'funktions_expertise', component: FunktionsExpertiseComponent },
   { path: 'kontakt', component: KontaktComponent },
-  { path: '', redirectTo: '/about_us/firma', pathMatch: 'full' },
+  {
+    path: '',
+    pathMatch: 'full',
+    component: FirmaComponent,
+    data: { showOverlay: true },
+  },
   { path: '**', redirectTo: '/about_us/firma' }, // TODO: 404?
 ];
 

@@ -1,9 +1,16 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import {
+  ActivatedRoute,
+  ActivationEnd,
+  ActivationStart,
+  NavigationEnd,
+  Router,
+  RoutesRecognized,
+} from '@angular/router';
 import { BaseComponent } from './containers/base.component';
 import { HeaderComponent } from './header/header.component';
-import { map } from 'rxjs/operators';
-import { Location } from '@angular/common';
+import { map, filter, mergeMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -16,19 +23,26 @@ export class AppComponent implements OnInit {
 
   title = 'ParaviciniAndPartners';
 
-  displayOverlay = false;
-  hasDisplayedOverlay = false;
+  displayOverlay$: Observable<boolean>;
 
-  constructor(private location: Location) {}
-
-  ngOnInit(): void {
-    if (
-      this.location.path() === '/about_us/firma' &&
-      !this.hasDisplayedOverlay
-    ) {
-      this.displayOverlay = true;
-    }
+  constructor(router: Router, activatedRoute: ActivatedRoute) {
+    this.displayOverlay$ = router.events.pipe(
+      filter((e) => e instanceof NavigationEnd),
+      map(() => activatedRoute),
+      map((route) => {
+        while (route.firstChild) {
+          route = route.firstChild;
+        }
+        return route;
+      }),
+      mergeMap((route) => route.data),
+      map((data) =>
+        data.hasOwnProperty('showOverlay') ? data.showOverlay : false
+      )
+    );
   }
+
+  ngOnInit(): void {}
 
   public onRouterOutletActivate(event: any): void {
     this.header.selectedSite = event as BaseComponent;
