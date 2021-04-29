@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FirmaComponent } from './containers/about_us/firma/firma.component';
 import { OwnerComponent } from './containers/about_us/owner/owner.component';
+import { DatenschutzComponent } from './containers/datenschutz/datenschutz.component';
 import { FunktionsExpertiseComponent } from './containers/funktions-expertise/funktions-expertise.component';
+import { ImpressumComponent } from './containers/impressum/impressum.component';
 import { IndustrieExpertiseComponent } from './containers/industrie-expertise/industrie-expertise.component';
 import { KontaktComponent } from './containers/kontakt/kontakt.component';
 import { AssessmentComponent } from './containers/unser_angebot/assessment/assessment.component';
@@ -32,6 +34,8 @@ export const routes: Routes = [
   { path: 'industrie_expertise', component: IndustrieExpertiseComponent },
   { path: 'funktions_expertise', component: FunktionsExpertiseComponent },
   { path: 'kontakt', component: KontaktComponent },
+  { path: 'impressum', component: ImpressumComponent },
+  { path: 'datenschutz', component: DatenschutzComponent },
   {
     path: '',
     pathMatch: 'full',

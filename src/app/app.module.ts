@@ -7,9 +7,11 @@ import { SitesModule } from './containers/sites.module';
 import { HeaderComponent } from './header/header.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
 import { FooterComponent } from './footer/footer.component';
+import { ImpressumComponent } from './containers/impressum/impressum.component';
+import { DatenschutzComponent } from './containers/datenschutz/datenschutz.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, MenuButtonComponent, OverlayComponent, FooterComponent],
+  declarations: [AppComponent, HeaderComponent, MenuButtonComponent, OverlayComponent, FooterComponent, ImpressumComponent, DatenschutzComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
