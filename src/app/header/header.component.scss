@@ -16,6 +16,10 @@
   }
 }
 
+img {
+  object-fit: contain;
+}
+
 .nav-container {
   background-color: white;
   z-index: $zindex-dropdown;
