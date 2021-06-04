@@ -1,0 +1,36 @@
+<svg width="350" height="350" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+  <defs>
+    <clipPath id="clip0">
+      <rect x="0" y="0" width="500" height="500" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip0)">
+
+    <g transform="translate(10, -10)">
+      <path d="
+      M 220 100
+      A 40 40 0 1 0 160 110
+      L 240 190
+      A 30 30 0 0 0 240 155
+      L 180 90
+      A 10 10 0 0 1 200 70 Z" fill="#85B2F6" />
+      <path d="
+      M 220 210
+      A 50 50 0 0 1 170 200
+      L 100 130
+      A 50 50 0 0 1 90 80 Z
+      " fill="#85B2F6" />
+      <path d="
+      M 150 215
+      L 110 215
+      A 50 50 0 0 1 80 150
+      " fill="#85B2F6" />
+    </g>
+    <text fill="#002060" font-family="Tw Cen MT,Tw Cen MT_MSFontService,sans-serif" font-weight="700" font-size="60" x="50%" y="75%" dominant-baseline="middle" text-anchor="middle">
+      PARAVICINI
+      <tspan fill="#629DD1" font-weight="400" font-size="50" x="50%" y="88%">
+      &amp; PARTNERS
+      </tspan>
+    </text>
+  </g>
+</svg>

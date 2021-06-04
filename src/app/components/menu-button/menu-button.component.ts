@@ -11,4 +11,14 @@ export class MenuButtonComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  public setOpenState(isOpen: boolean): void {
+    this.open = isOpen;
+
+    if (this.open && window.innerWidth < 768) {
+      document.body.style.overflowY = 'hidden';
+    } else {
+      document.body.style.overflowY = 'scroll';
+    }
+  }
 }

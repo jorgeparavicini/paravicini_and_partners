@@ -1,6 +1,6 @@
 <div
   class="d-flex justify-content-center align-items-center cursor-pointer menu"
-  (click)="open = !open"
+  (click)="setOpenState(!open)"
 >
   <div class="burger ms-4 me-4" [ngClass]="{ 'burger-open': open }">
     <span class="bar"></span>

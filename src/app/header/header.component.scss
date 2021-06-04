@@ -16,8 +16,10 @@
   }
 }
 
-img {
+.logo {
   object-fit: contain;
+  height: 100px;
+  margin-bottom: 8px;
 }
 
 .nav-container {
@@ -109,4 +111,15 @@ img {
 
 .nav-btn-icon-open {
   transform: rotateX(90deg);
+}
+
+.menu-content {
+  @include media-breakpoint-down(md) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: $header_size_small;
+    overflow-y: scroll;
+  }
 }

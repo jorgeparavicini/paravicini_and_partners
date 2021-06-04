@@ -4,17 +4,26 @@
       <p class="m-0 fs-2">Paravicini & Partners</p>
       <p class="m-0 fs-5">Executive Search, Assessment and Coaching</p>
     </div>
-    <img class="img-fluid d-block" src="/assets/img/logo.png" alt="Logo" />
+    <img class="img-fluid d-block logo" src="/assets/img/logo.svg" alt="Logo" />
   </div>
   <div
-    class="text-white w-100 position-relative bg-primary d-flex justify-content-center align-items-center flex-grow-1"
+    class="
+      text-white
+      w-100
+      position-relative
+      bg-primary
+      d-flex
+      justify-content-center
+      align-items-center
+      flex-grow-1
+    "
   >
     <div class="h-100 start-0 d-flex position-absolute align-items-center">
       <app-menu-button #menu></app-menu-button>
     </div>
 
     <p class="pt-3 pb-3 m-0 text-center d-block d-md-none fs-3 w-100">
-      Paravicini & partners
+      Paravicini & Partners
     </p>
 
     <nav
@@ -36,7 +45,7 @@
   [ngClass]="{ 'menu-open': menu.open }"
 >
   <div
-    class="pb-3 d-block position-fixed nav-container"
+    class="pb-3 d-block position-fixed nav-container menu-content"
     [ngClass]="selectedSite ? 'd-md-block' : 'd-md-none'"
   >
     <nav
@@ -54,7 +63,7 @@
           [ngClass]="{
             'btn-side-menu-primary':
               selectedSite?.subSiteIndex === j ||
-              (selectedSite && sites[selectedSite.siteIndex].common),
+              (selectedSite && sites[selectedSite.siteIndex]?.common),
             'd-none d-md-block': sites[i].common && j > 0
           }"
           href="{{ subsite.url }}"

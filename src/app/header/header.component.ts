@@ -84,9 +84,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   private checkMenuState(): void {
     if (this.menu && typeof window !== 'undefined') {
       if (window.innerWidth >= 768) {
-        this.menu.open = true;
+        this.menu.setOpenState(true);
       } else {
-        this.menu.open = false;
+        this.menu.setOpenState(false);
       }
     }
   }

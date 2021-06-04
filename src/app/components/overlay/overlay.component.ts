@@ -40,7 +40,6 @@ export class OverlayComponent implements OnInit, AfterViewInit {
   }
 
   hideOverlay(): void {
-    console.log('Hiding');
     this.shouldHide = true;
     this.showScrollbar();
   }
