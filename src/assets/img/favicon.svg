@@ -1,0 +1,29 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+  <defs>
+    <clipPath id="clip0">
+      <rect x="0" y="0" width="250" height="250" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip0)">
+    <g transform="translate(-35, -3)">
+      <path d="
+      M 220 100
+      A 40 40 0 1 0 160 110
+      L 240 190
+      A 30 30 0 0 0 240 155
+      L 180 90
+      A 10 10 0 0 1 200 70 Z" fill="#85B2F6" />
+      <path d="
+      M 220 210
+      A 50 50 0 0 1 170 200
+      L 100 130
+      A 50 50 0 0 1 90 80 Z
+      " fill="#85B2F6" />
+      <path d="
+      M 150 215
+      L 110 215
+      A 50 50 0 0 1 80 150
+      " fill="#85B2F6" />
+    </g>
+  </g>
+</svg>

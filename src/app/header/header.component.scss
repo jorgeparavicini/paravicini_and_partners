@@ -18,7 +18,7 @@
 
 .logo {
   object-fit: contain;
-  height: 100px;
+  height: 75px;
   margin-bottom: 8px;
 }
 
@@ -75,6 +75,7 @@
 .banner-nav {
   margin-left: 60px;
   margin-right: 60px;
+  height: 60px;
 
   @include media-breakpoint-up(lg) {
     margin-left: 120px;
