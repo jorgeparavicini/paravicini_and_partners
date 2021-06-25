@@ -11,7 +11,15 @@ import { ImpressumComponent } from './containers/impressum/impressum.component';
 import { DatenschutzComponent } from './containers/datenschutz/datenschutz.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, MenuButtonComponent, OverlayComponent, FooterComponent, ImpressumComponent, DatenschutzComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    MenuButtonComponent,
+    OverlayComponent,
+    FooterComponent,
+    ImpressumComponent,
+    DatenschutzComponent,
+  ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
