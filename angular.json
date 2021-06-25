@@ -42,7 +42,8 @@
               "src/mstile-310x310.png",
               "src/safari-pinned-tab.svg",
               "src/site.webmanifest",
-              "src/sitemap.xml"
+              "src/sitemap.xml",
+              "src/robots.txt"
             ],
             "styles": ["src/styles.scss"],
             "scripts": []
