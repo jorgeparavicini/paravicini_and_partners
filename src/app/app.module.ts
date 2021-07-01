@@ -9,6 +9,7 @@ import { OverlayComponent } from './components/overlay/overlay.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImpressumComponent } from './containers/impressum/impressum.component';
 import { DatenschutzComponent } from './containers/datenschutz/datenschutz.component';
+import { SEOService } from './services/seo.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { DatenschutzComponent } from './containers/datenschutz/datenschutz.compo
     AppRoutingModule,
     SitesModule,
   ],
-  providers: [],
+  providers: [SEOService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

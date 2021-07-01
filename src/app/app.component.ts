@@ -11,6 +11,7 @@ import { BaseComponent } from './containers/base.component';
 import { HeaderComponent } from './header/header.component';
 import { map, filter, mergeMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { SEOService } from './services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,11 @@ export class AppComponent implements OnInit {
 
   displayOverlay$: Observable<boolean>;
 
-  constructor(router: Router, activatedRoute: ActivatedRoute) {
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private seoService: SEOService
+  ) {
     this.displayOverlay$ = router.events.pipe(
       filter((e) => e instanceof NavigationEnd),
       map(() => activatedRoute),
@@ -42,7 +47,26 @@ export class AppComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        map(() => this.activatedRoute),
+        map((route) => {
+          while (route.firstChild) {
+            route = route.firstChild;
+          }
+          return route;
+        }),
+        filter((route) => route.outlet === 'primary'),
+        mergeMap((route) => route.data)
+      )
+      .subscribe((event) => {
+        this.seoService.updateTitle(event.title);
+        this.seoService.updateOgUrl(event.ogUrl);
+        this.seoService.updateDescription(event.description);
+      });
+  }
 
   public onRouterOutletActivate(event: any): void {
     this.header.selectedSite = event as BaseComponent;

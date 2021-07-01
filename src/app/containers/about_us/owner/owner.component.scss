@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.owner {
+  width: 150px;
+
+  @include media-breakpoint-up(lg) {
+    width: 200px;
+  }
+}
