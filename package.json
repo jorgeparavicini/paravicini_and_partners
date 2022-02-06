@@ -1,6 +1,6 @@
 {
   "name": "paravicini-and-partners",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "ng": "nx",
     "start": "ng serve",
