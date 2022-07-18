@@ -14,7 +14,7 @@ import {
 export class OverlayComponent implements OnInit, AfterViewInit {
   @ViewChild('video') video!: ElementRef;
 
-  duration = 6000;
+  duration = 7500;
   fadeOutDuration = 2000;
 
   display = true;

@@ -29,10 +29,15 @@ video {
   }
 }
 
-.slideIn {
-  animation: 7s ease-in-out 0s 1 enlarge;
+.slideInText {
+  transform: scale(0);
+  animation: 5s ease-in-out 2s 1 enlarge forwards;
 }
 
-p {
-  font-family: 'Roboto Slab', serif;
+.slideInLogo {
+  animation: 3s ease-in-out 0s 1 enlarge forwards;
+}
+
+.logo {
+  height: 60px;
 }

@@ -43,12 +43,12 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       common: false,
     },
     {
-      name: 'Industrie Expertise',
-      url: '/industrie_expertise',
+      name: 'Branchen Expertise',
+      url: '/branchen_expertise',
       subSites: [
-        { name: 'Industrie', url: '/industrie_expertise' },
-        { name: 'Technologie', url: '/industrie_expertise' },
-        { name: 'IT & Telekommunikation', url: '/industrie_expertise' },
+        { name: 'Industrie', url: '/branchen_expertise' },
+        { name: 'Technologie', url: '/branchen_expertise' },
+        { name: 'IT & Telekommunikation', url: '/branchen_expertise' },
       ],
       common: true,
     },
@@ -56,7 +56,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       name: 'Funktions Expertise',
       url: '/funktions_expertise',
       subSites: [
-        { name: 'Board', url: '/funktions_expertise' },
+        { name: 'Funktionen', url: '/funktions_expertise' },
         { name: 'CEO & Management', url: '/funktions_expertise' },
         { name: 'CFO & Finance', url: '/funktions_expertise' },
         { name: 'CIO & Digital', url: '/funktions_expertise' },

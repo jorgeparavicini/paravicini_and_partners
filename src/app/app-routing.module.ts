@@ -144,10 +144,10 @@ export const routes: Routes = [
     ],
   },
   {
-    path: 'industrie_expertise',
+    path: 'branchen_expertise',
     component: IndustrieExpertiseComponent,
     data: {
-      title: 'Paravicini & Partners - Industrie Expertise',
+      title: 'Paravicini & Partners - Branchen Expertise',
       description: `Paravicini & Partners hat über 30 Jahre Erfahrung in der
       Industrie- und der Technologie-Branche. In der Technologie-Branche
        haben wir eine tiefe Spezialisierung im IT- , Software-,

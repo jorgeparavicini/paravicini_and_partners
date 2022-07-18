@@ -27,16 +27,33 @@
       flex-grow-1
     "
   >
-    <div class="h-100 start-0 d-flex position-absolute align-items-center">
+    <div class="h-100 start-0 d-flex position-absolute align-items-center serif">
       <app-menu-button #menu></app-menu-button>
     </div>
 
-    <p class="pt-3 pb-3 m-0 text-center d-block d-md-none fs-3 w-100">
-      Paravicini & Partners
-    </p>
+    <div
+      class="
+        text-center
+        d-flex d-md-none
+        fs-3
+        w-100
+        justify-content-between
+        align-items-center
+        me-2
+      "
+      style="margin-left: 70px"
+    >
+      <p class="pt-3 pb-3 m-0">Paravicini & Partners</p>
+      <img
+        class="img-fluid"
+        src="assets/img/logo_white.svg"
+        alt="Paravicini & Partners Logo"
+        style="height: 40px"
+      />
+    </div>
 
     <nav
-      class="d-none d-md-flex justify-content-center container-sm banner-nav"
+      class="d-none d-md-flex justify-content-center container-sm banner-nav serif"
     >
       <a
         *ngFor="let site of sites; let i = index"
