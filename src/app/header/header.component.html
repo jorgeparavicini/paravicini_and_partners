@@ -75,7 +75,7 @@
     [ngClass]="selectedSite ? 'd-md-block' : 'd-md-none'"
   >
     <nav
-      class="d-flex flex-column w-100 align-items-center ps-4 pe-4 pt-md-5"
+      class="d-flex flex-column w-100 align-items-center ps-4 pe-2 pt-md-5"
       *ngFor="let site of sites; let i = index"
       [ngClass]="selectedSite?.siteIndex === i ? 'd-md-flex' : 'd-md-none'"
     >
@@ -89,8 +89,7 @@
           [ngClass]="{
             'btn-side-menu-primary':
               selectedSite?.subSiteIndex === j ||
-              (selectedSite && sites[selectedSite.siteIndex]?.common),
-            'd-none d-md-block': sites[i].common && j > 0
+              (selectedSite && sites[selectedSite.siteIndex]?.common)
           }"
           href="{{ subsite.url }}"
         >
