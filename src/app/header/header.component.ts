@@ -56,6 +56,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       name: 'Funktions Expertise',
       url: '/funktions_expertise',
       subSites: [
+        { name: 'VR & Board Members', url: '/funktions_expertise' },
         { name: 'CEO & Management', url: '/funktions_expertise' },
         { name: 'CFO & Finance', url: '/funktions_expertise' },
         { name: 'CIO & Digital', url: '/funktions_expertise' },
